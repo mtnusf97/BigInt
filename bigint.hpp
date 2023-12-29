@@ -361,17 +361,6 @@ BigInt::BigInt(const string& str)
 
 }
 
-// /**
-//  * @brief Construct a new BigInt from another BigInt:: Big Int object
-//  * 
-//  * @param str 
-//  */
-// BigInt::BigInt(const BigInt& bigint) 
-// {
-//     abs_value = bigint.abs_value;
-//     sign = bigint.sign;
-// }
-
 /**********************************************************************
 *************************** ASSIGNMENT = ******************************
 **********************************************************************/
