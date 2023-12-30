@@ -17,6 +17,198 @@
 
 using namespace std;
 
+
+/**********************************************************************
+*************************** BIGINT CLASS ******************************
+**********************************************************************/
+
+class BigInt 
+{
+    public:
+        // default constructor        
+        BigInt();
+        // constructing from another 64-bit integer
+        BigInt(const int64_t&);
+        // constructing from a string
+        BigInt(const string&);
+
+        // assignment of an int to BigInt
+        BigInt& operator=(const int64_t&);
+        // assignment of a string to BigInt
+        BigInt& operator=(const string&);
+
+        // overloaded +bigint
+        BigInt operator+() const;
+        // -bigint
+        BigInt operator-() const;
+
+        BigInt& operator+=(const BigInt&);
+        // overloaded BigInt += 64-bit integer
+        BigInt& operator+=(const int64_t&);
+        // overloaded BigInt += string
+        BigInt& operator+=(const string&);
+
+        // overloaded BigInt -= BigInt
+        BigInt& operator-=(const BigInt&);
+        // overloaded BigInt -= 64-bit integer
+        BigInt& operator-=(const int64_t&);
+        // overloaded BigInt -= string
+        BigInt& operator-=(const string&);
+
+        // overloaded BigInt *= BigInt
+        BigInt& operator*=(const BigInt&);
+        // overloaded BigInt *= 64-bit integer
+        BigInt& operator*=(const int64_t&);
+        // overloaded BigInt *= string
+        BigInt& operator*=(const string&);
+
+        // get sign and value
+        char get_sign() const;
+        string get_abs_value() const;
+            
+        // << stream
+        friend ostream& operator<<(ostream&, const BigInt&);
+
+    private:
+        string abs_value;
+        char sign;
+};
+
+// overloaded BigInt + BigInt
+BigInt operator+(BigInt lhs, const BigInt& rhs);
+
+// overloaded BigInt + string
+BigInt operator+(const BigInt& lhs, const string& rhs);
+
+// overloaded string + BigInt
+BigInt operator+(const string& lhs, const BigInt& rhs);
+
+// overloaded BigInt + 64-bit integer
+BigInt operator+(const BigInt& lhs, const int64_t& rhs);
+
+// overloaded 64-bit integer + BigInt
+BigInt operator+(const int64_t& lhs, BigInt rhs);
+
+// overloaded BigInt - BigInt
+BigInt operator-(BigInt lhs, const BigInt& rhs);
+
+// overloaded BigInt - string
+BigInt operator-(const BigInt& lhs, const string& rhs);
+
+// overloaded string - BigInt
+BigInt operator-(const string& lhs, const BigInt& rhs);
+
+// overloaded BigInt - 64-bit integer
+BigInt operator-(const BigInt& lhs, const int64_t& rhs);
+
+// overloaded 64-bit integer - BigInt
+BigInt operator-(const int64_t& lhs, BigInt rhs);
+
+// overloaded BigInt * BigInt
+BigInt operator*(BigInt lhs, const BigInt& rhs);
+
+// overloaded BigInt * string
+BigInt operator*(const BigInt& lhs, const string& rhs);
+
+// overloaded string * BigInt
+BigInt operator*(const string& lhs, const BigInt& rhs);
+
+// overloaded BigInt * 64-bit integer
+BigInt operator*(const BigInt& lhs, const int64_t& rhs);
+
+// overloaded 64-bit integer * BigInt
+BigInt operator*(const int64_t& lhs, BigInt rhs);
+
+// overloaded BigInt == BigInt
+bool operator==(const BigInt& lhs, const BigInt& rhs);
+
+// overloaded BigInt == string
+bool operator==(const BigInt& lhs, const string& rhs);
+
+// overloaded string == BigInt
+bool operator==(const string& lhs, const BigInt& rhs);
+
+// overloaded 64-bit integer == BigInt
+bool operator==(const int64_t& lhs, const BigInt& rhs);
+
+// overloaded BigInt == 64-bit integer
+bool operator==(const BigInt& lhs, const int64_t& rhs);
+
+// overloaded BigInt != BigInt
+bool operator!=(const BigInt& lhs, const BigInt& rhs);
+
+// overloaded BigInt != string
+bool operator!=(const BigInt& lhs, const string& rhs);
+
+// overloaded string != BigInt
+bool operator!=(const string& lhs, const BigInt& rhs);
+
+// overloaded 64-bit integer != BigInt
+bool operator!=(const int64_t& lhs, const BigInt& rhs);
+
+// overloaded BigInt != 64-bit integer
+bool operator!=(const BigInt& lhs, const int64_t& rhs);
+
+// overloaded BigInt > BigInt
+bool operator>(const BigInt& lhs, const BigInt& rhs);
+
+// overloaded BigInt > string
+bool operator>(const BigInt& lhs, const string& rhs);
+
+// overloaded string > BigInt
+bool operator>(const string& lhs, const BigInt& rhs);
+
+// overloaded 64-bit integer > BigInt
+bool operator>(const int64_t& lhs, const BigInt& rhs);
+
+// overloaded BigInt > 64-bit integer
+bool operator>(const BigInt& lhs, const int64_t& rhs);
+
+// overloaded BigInt < BigInt
+bool operator<(const BigInt& lhs, const BigInt& rhs);
+
+// overloaded BigInt < string
+bool operator<(const BigInt& lhs, const string& rhs);
+
+// overloaded string < BigInt
+bool operator<(const string& lhs, const BigInt& rhs);
+
+// overloaded 64-bit integer < BigInt
+bool operator<(const int64_t& lhs, const BigInt& rhs);
+
+// overloaded BigInt < 64-bit integer
+bool operator<(const BigInt& lhs, const int64_t& rhs);
+
+// overloaded BigInt >= BigInt
+bool operator>=(const BigInt& lhs, const BigInt& rhs);
+
+// overloaded BigInt >= string
+bool operator>=(const BigInt& lhs, const string& rhs);
+
+// overloaded string >= BigInt
+bool operator>=(const string& lhs, const BigInt& rhs);
+
+// overloaded 64-bit integer >= BigInt
+bool operator>=(const int64_t& lhs, const BigInt& rhs);
+
+// overloaded BigInt >= 64-bit integer
+bool operator>=(const BigInt& lhs, const int64_t& rhs);
+
+// overloaded BigInt <= BigInt
+bool operator<=(const BigInt& lhs, const BigInt& rhs);
+
+// overloaded BigInt <= string
+bool operator<=(const BigInt& lhs, const string& rhs);
+
+// overloaded string <= BigInt
+bool operator<=(const string& lhs, const BigInt& rhs);
+
+// overloaded 64-bit integer <= BigInt
+bool operator<=(const int64_t& lhs, const BigInt& rhs);
+
+// overloaded BigInt <= 64-bit integer
+bool operator<=(const BigInt& lhs, const int64_t& rhs);
+
 /**********************************************************************
 *********************** AUXILIARY FUNCTIONS ***************************
 **********************************************************************/
@@ -216,63 +408,6 @@ bool is_first_abs_value_greater(const string& abs_val1, const string& abs_val2)
 }
 
 /**********************************************************************
-*************************** BIGINT CLASS ******************************
-**********************************************************************/
-
-class BigInt 
-{
-    public:
-        // default constructor        
-        BigInt();
-        // constructing from another 64-bit integer
-        BigInt(const int64_t&);
-        // constructing from a string
-        BigInt(const string&);
-
-        // assignment of an int to BigInt
-        BigInt& operator=(const int64_t&);
-        // assignment of a string to BigInt
-        BigInt& operator=(const string&);
-
-        // +bigint
-        BigInt operator+() const;
-        // -bigint
-        BigInt operator-() const;
-
-        // BigInt += BigInt
-        BigInt& operator+=(const BigInt&);
-        // BigInt += 64-bit integer
-        BigInt& operator+=(const int64_t&);
-        // BigInt += string
-        BigInt& operator+=(const string&);
-
-        // BigInt -= BigInt
-        BigInt& operator-=(const BigInt&);
-        // BigInt -= 64-bit integer
-        BigInt& operator-=(const int64_t&);
-        // BigInt -= string
-        BigInt& operator-=(const string&);
-
-        // BigInt *= BigInt
-        BigInt& operator*=(const BigInt&);
-        // BigInt *= 64-bit integer
-        BigInt& operator*=(const int64_t&);
-        // BigInt *= string
-        BigInt& operator*=(const string&);
-
-        // get sign and value
-        char get_sign() const;
-        string get_abs_value() const;
-            
-        // << stream
-        friend ostream& operator<<(ostream&, const BigInt&);
-
-    private:
-        string abs_value;
-        char sign;
-};
-
-/**********************************************************************
 ************************** MEMBER FUNCTIONS ***************************
 **********************************************************************/
 
@@ -360,6 +495,17 @@ BigInt::BigInt(const string& str)
     }
 
 }
+
+// /**
+//  * @brief Construct a new BigInt from another BigInt:: Big Int object
+//  * 
+//  * @param str 
+//  */
+// BigInt::BigInt(const BigInt& bigint) 
+// {
+//     abs_value = bigint.abs_value;
+//     sign = bigint.sign;
+// }
 
 /**********************************************************************
 *************************** ASSIGNMENT = ******************************
