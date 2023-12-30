@@ -148,4 +148,4 @@ file.close();
 
 ## Acknowledgement
 
-This library was developed as the final project of the course CSE 701 - Advanced Scientific Computing, instructed by [Prof. Barak Shoshany](https://baraksh.com/). The comprehensive [lecture notes](https://baraksh.com/CSE701/notes.php) provided by Prof. Shoshany were instrumental in the creation of this project. The structure and approach of this `README` have been significantly influenced by [thread pool library](https://github.com/bshoshany/thread-pool/tree/master).
+This library was developed as the final project of the course CSE 701 - Foundations of Modern Scientific Programming, instructed by [Prof. Barak Shoshany](https://baraksh.com/). The comprehensive [lecture notes](https://baraksh.com/CSE701/notes.php) provided by Prof. Shoshany were instrumental in the creation of this project. The structure and approach of this `README` have been significantly influenced by [thread pool library](https://github.com/bshoshany/thread-pool/tree/master)'s `README`.
