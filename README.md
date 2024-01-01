@@ -73,11 +73,11 @@ bigint1 += 136124642;
 bigint1 += "00005125123561263163514124213561261";
 ```
 ```cpp
-bigint1 += bigint2 + bigint3;
-bigint1 += bigint2 + 136124642;
-bigint1 += 136124642 + bigint2;
-bigint1 += bigint2 + "00005125123561263163514124213561261";
-bigint1 += "00005125123561263163514124213561261" + bigint2;
+bigint1 = bigint2 + bigint3;
+bigint1 = bigint2 + 136124642;
+bigint1 = 136124642 + bigint2;
+bigint1 = bigint2 + "00005125123561263163514124213561261";
+bigint1 = "00005125123561263163514124213561261" + bigint2;
 ```
 
 
@@ -89,11 +89,11 @@ bigint1 -= 25123561263;
 bigint1 -= "512512356126316351412421";
 ```
 ```cpp
-bigint1 -= bigint2 - bigint3;
-bigint1 -= bigint2 - 25123561263;
-bigint1 -= 25123561263 - bigint2;
-bigint1 -= bigint2 - "512512356126316351412421";
-bigint1 -= "512512356126316351412421" - bigint2;
+bigint1 = bigint2 - bigint3;
+bigint1 = bigint2 - 25123561263;
+bigint1 = 25123561263 - bigint2;
+bigint1 = bigint2 - "512512356126316351412421";
+bigint1 = "512512356126316351412421" - bigint2;
 ```
 
 ### Multiplication
@@ -104,11 +104,11 @@ bigint1 *= 25123561263;
 bigint1 *= "512512356126316351412421";
 ```
 ```cpp
-bigint1 *= bigint2 * bigint3;
-bigint1 *= bigint2 * 25123561263;
-bigint1 *= 25123561263 * bigint2;
-bigint1 *= bigint2 * "512512356126316351412421";
-bigint1 *= "512512356126316351412421" * bigint2;
+bigint1 = bigint2 * bigint3;
+bigint1 = bigint2 * 25123561263;
+bigint1 = 25123561263 * bigint2;
+bigint1 = bigint2 * "512512356126316351412421";
+bigint1 = "512512356126316351412421" * bigint2;
 ```
 
 ### Negation
